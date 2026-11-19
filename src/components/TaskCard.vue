@@ -5,10 +5,11 @@ import PriorityBadge from './PriorityBadge.vue'
 
 const props = defineProps({
   task: { type: Object, required: true },
+  editable: { type: Boolean, default: false },
   selected: { type: Boolean, default: false },
 })
 
-const emit = defineEmits(['status-change', 'priority-change', 'task-select'])
+const emit = defineEmits(['status-change', 'priority-change', 'edit', 'task-select'])
 
 const statusSequence = ['todo', 'progress', 'done']
 const prioritySequence = ['low', 'medium', 'high']
@@ -44,7 +45,7 @@ function changePriority() {
   })
 }
 
-// Додаткове завдання 5: подія вибору завдання
+// КП 2/5, додаткове завдання 5: подія вибору завдання
 function selectTask() {
   emit('task-select', { id: props.task.id, title: props.task.title })
 }
@@ -75,6 +76,9 @@ function selectTask() {
         </button>
         <button type="button" class="tf3-action" @click="changePriority">
           Змінити пріоритет
+        </button>
+        <button v-if="editable" type="button" class="tf3-action" @click="emit('edit', task.id)">
+          Редагувати
         </button>
       </div>
     </f7-card-content>
