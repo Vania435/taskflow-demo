@@ -1,10 +1,15 @@
 export const tasks = [
-  { id: 1, title: 'Створити проєкт TaskFlow', description: 'Vite, Vue 3 і Framework7', completed: true },
-  { id: 2, title: 'Підготувати структуру проєкту', description: 'Каталоги та сторінки', completed: true },
-  { id: 3, title: 'Налаштувати навігацію', description: 'Маршрути та панель', completed: false },
-  { id: 4, title: 'Підготувати звіт', description: 'Оформлення результатів', completed: false },
-  // Додаткове завдання 4: три нові записи з різним статусом
-  { id: 5, title: 'Підключити framework7-icons', description: 'Іконки для навігації та карток', completed: true },
-  { id: 6, title: 'Додати показник «Очікує виконання»', description: 'Третя картка статистики', completed: true },
-  { id: 7, title: 'Перевірити ширину 320 та 768 px', description: 'Device toolbar у DevTools', completed: false },
-];
+  { id: 1, title: 'Створити макет картки завдання', description: 'Розробити компонент TaskCard для TaskFlow.', status: 'todo', priority: 'high', dueDate: '2026-10-23' },
+  { id: 2, title: 'Налаштувати навігацію', description: 'Реалізувати Navbar, Toolbar та переходи.', status: 'done', priority: 'medium', dueDate: '2026-10-24' },
+  { id: 3, title: 'Створити індикатор статусу', description: 'Розробити компонент StatusBadge.', status: 'progress', priority: 'high', dueDate: '2026-10-25' },
+  { id: 4, title: 'Реалізувати фільтрацію завдань', description: 'Додати фільтри за статусом і пріоритетом.', status: 'todo', priority: 'medium', dueDate: '2026-10-27' },
+  { id: 5, title: 'Створити адаптивний інтерфейс', description: 'Налаштувати вигляд на різних екранах.', status: 'progress', priority: 'low', dueDate: '2026-10-29' },
+  { id: 6, title: 'Підготувати структуру PWA', description: 'Налаштувати початковий проєкт.', status: 'done', priority: 'low', dueDate: '2026-10-30' },
+  // Додаткове завдання 1: чотири власні завдання
+  { id: 7, title: 'Створити компонент TaskCounter', description: 'Лічильник завдань, що отримує число через Props.', status: 'done', priority: 'medium', dueDate: '2026-11-02' },
+  { id: 8, title: 'Додати відсоток виконання', description: 'Смуга прогресу на головній сторінці.', status: 'progress', priority: 'medium', dueDate: '2026-11-04' },
+  { id: 9, title: 'Реалізувати сортування за пріоритетом', description: 'Високий → середній → низький.', status: 'todo', priority: 'high', dueDate: '2026-11-06' },
+  { id: 10, title: 'Опублікувати оновлення на Cloudflare', description: 'git push та перевірка нового deployment.', status: 'todo', priority: 'low', dueDate: '2026-11-10' },
+]
+
+export default tasks
